@@ -1,0 +1,370 @@
+//import files/partials
+@import "config";
+@import "utilities";
+@import "item_grid";
+
+//general styles
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Dosis", sans-serif;
+  line-height: 1.6;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: $dark-color;
+}
+
+img {
+  width: 100%;
+}
+
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+}
+
+ul {
+  list-style: none;
+}
+
+//logo
+#logo {
+  width: 70px;
+  height: 70px;
+  color: #fff;
+  text-transform: uppercase;
+}
+//main nav
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    padding: 1rem 1.5rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 3px transparent solid;
+    padding-bottom: 0.5rem;
+    transition: border-color 0.5s;
+
+    &:hover {
+      border-color: $main-color;
+    }
+    &.current {
+      border-color: $main-color;
+    }
+  }
+}
+//Header
+#header {
+  &-home {
+    background: $bg-img no-repeat center right / cover;
+    color: #fff;
+    height: 100vh;
+
+    //header content
+    .header-content {
+      text-align: center;
+      padding-top: 20%;
+      h1 {
+        font-size: 4rem;
+        line-height: 1.2;
+      }
+    }
+  }
+  // header inner
+  &-inner {
+    background: $bg-img no-repeat 20% 30% / cover;
+    height: 5.5rem;
+    border-bottom: 3px solid $main-color;
+  }
+}
+// Section
+#home {
+  &-a {
+    .specials {
+      margin-top: 3rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1rem;
+
+      .fas {
+        color: $main-color;
+        padding-bottom: 0.4rem;
+      }
+    }
+  }
+
+  // Section Home B
+  &-b {
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      li {
+        line-height: 2;
+
+        &.stats-title {
+          font-size: 1.5rem;
+        }
+        &.stats-number {
+          font-size: 2rem;
+          font-weight: bold;
+        }
+      }
+
+      div {
+        padding: 3rem 0;
+        &:nth-child(odd) {
+          background: $light-color;
+        }
+        &:nth-child(even) {
+          background: $medium-color;
+        }
+      }
+    }
+  }
+
+  //Home C
+  &-c {
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1.5rem;
+      text-align: center;
+
+      &-step {
+        width: 15px;
+        height: 15px;
+        line-height: 15px;
+        font-size: 28px;
+        background: $main-color;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 1rem;
+        transition: all 1s;
+      }
+      &-icon {
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        border-radius: 50%;
+        padding: 2rem;
+        color: #fff;
+        background: $dark-color;
+        text-align: center;
+        position: relative;
+        transition: all 1s;
+
+        &:hover {
+          width: 90px;
+          height: 90px;
+          line-height: 90px;
+          background: $main-color;
+
+          .process-step {
+            background: $dark-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+//About section
+#about {
+  // About A
+  &-a {
+    .about-info {
+      display: grid;
+      grid-template-areas: "bioimg bio bio" "aw1 aw2 aw3";
+      grid-gap: 1.2rem;
+    }
+    //Grid area
+    .bio-image {
+      grid-area: bioimg;
+    }
+    .bio {
+      grid-area: bio;
+      border-left: 3px solid $main-color;
+      padding: 0.8rem;
+    }
+    .award-1 {
+      grid-area: aw1;
+    }
+    .award-2 {
+      grid-area: aw2;
+    }
+    .award-3 {
+      grid-area: aw3;
+    }
+
+    .award-1 .fas,
+    .award-2 .fas,
+    .award-3 .fas {
+      color: $main-color;
+      margin: 1rem;
+    }
+  }
+
+  // About B
+  &-b {
+    .progress-content {
+      h4 {
+        float: left;
+        width: 20%;
+      }
+      .progress {
+        float: left;
+        width: 80%;
+        overflow: hidden;
+        height: 20px;
+        background: $medium-color;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+
+        div {
+          height: 100%;
+          color: #fff;
+          text-align: center;
+          background: $main-color;
+        }
+      }
+    }
+  }
+
+  // About c
+  &-c {
+    .about-logos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 2rem;
+      img {
+        width: 70%;
+      }
+    }
+  }
+
+  // About D
+  &-d {
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 0.4rem;
+
+      ul {
+        list-style: none;
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+      }
+      p {
+        border: 1px solid $medium-color;
+        border-radius: 5px;
+        padding: 0.5rem;
+      }
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+// Contact
+#contact {
+  &-a {
+    .text-fields {
+      display: grid;
+      grid-template-areas: "name subject" "email phone" "msg msg";
+      grid-gap: 1rem;
+      margin-bottom: 1rem;
+
+      //grid areas
+      .name-input {
+        grid-area: name;
+      }
+      .subject-input {
+        grid-area: subject;
+      }
+      .email-input {
+        grid-area: email;
+      }
+      .message-input {
+        grid-area: msg;
+        height: 100px;
+      }
+
+      .text-input {
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+
+  // contact-b
+  &-b {
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1rem;
+      text-align: center;
+    }
+  }
+
+  //contact-c
+  &-c {
+    h1 {
+      font-size: 4rem;
+    }
+  }
+}
+
+// footer
+#main-footer {
+  background: $dark-color;
+  height: 5rem;
+  color: set-text-color($dark-color);
+
+  .footer-content {
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .social .fab {
+      margin-right: 1rem;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      padding: 0.5rem;
+      text-align: center;
+
+      &:hover {
+        background: $main-color;
+      }
+    }
+  }
+}
+@import "media";

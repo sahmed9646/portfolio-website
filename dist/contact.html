@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <!--Header-->
+    <header id="header-inner">
+      <div class="container">
+        <nav id="main-nav">
+          <img src="img/logo.png" alt="" id="logo" />
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="contact.html" class="current">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Section A : Contact-A -->
+    <section id="contact-a" class="text-center py-3">
+      <div class="container">
+        <h2 class="section-title">contact me</h2>
+        <div class="bottom-line"></div>
+        <p class="lead">This is how you can get me</p>
+        <form method="POST" data-netlify="true" data-netlify-recaptcha="true">
+          <div class="text-fields">
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              class="text-input name-input"
+            />
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              class="text-input subject-input"
+            />
+            <input
+              type="text"
+              name="email"
+              placeholder="Email"
+              class="text-input email-input"
+            />
+            <input
+              type="text"
+              name="phone"
+              placeholder="Phone number"
+              class="text-input phone-input"
+            />
+            <textarea
+              name="message"
+              placeholder="Type your message"
+              class="text-input message-input"
+            ></textarea>
+            <div class="my-2">
+              <div data-netlify-recaptcha="true"></div>
+            </div>
+          </div>
+          <button type="submit" class="btn-dark">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Section B : Contact Info-->
+    <section id="contact-b" class="py-3 bg-dark">
+      <div class="container">
+        <div class="contact-info">
+          <div>
+            <i class="fas fa-envelope fa-2x"></i>
+            <h3>Email</h3>
+            <p>sabbir9646@gmail.com</p>
+          </div>
+          <div>
+            <i class="fas fa-phone fa-2x"></i>
+            <h3>Phone</h3>
+            <p>(+351) 920 264435</p>
+          </div>
+          <div>
+            <i class="fas fa-address-card fa-2x"></i>
+            <h3>Address</h3>
+            <p>2720-356 Amadora, Lisbon</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section C : Tagline-->
+    <section id="contact-c" class="text-center py-4 bg-main">
+      <div class="container">
+        <h1>Let's start your next project</h1>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer id="main-footer">
+      <div class="container footer-content">
+        <p>Copywright &copy; 2020, All Rights Reserved</p>
+        <div class="social">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-linkedin"></i>
+        </div>
+      </div>
+    </footer>
+
+    <!--Font awesome icons -->
+    <script
+      src="https://kit.fontawesome.com/2a1eb5b58e.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
